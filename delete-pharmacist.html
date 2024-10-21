@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Pharmacist</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-box">
+        <h1>Delete Pharmacist</h1>
+        <form id="delete-form" method="post" action="/delete-pharmacist">
+          <div class="input-box">
+            <label for="delete_pharmacist_id"
+              >Pharmacist ID (e.g., PHARM001)</label
+            >
+            <input
+              type="text"
+              id="delete_pharmacist_id"
+              name="Pharmacist_ID"
+              required
+            />
+            <small id="delete_pharmacist_id_error"></small>
+
+            <label for="delete_pharmacist_name">Pharmacist Name:</label>
+            <input
+              type="text"
+              id="delete_pharmacist_name"
+              name="Pharmacist_name"
+              required
+              placeholder="John Doe"
+            />
+            <small id="delete_pharmacist_name_error"></small>
+          </div>
+
+          <button type="submit">Delete</button>
+          <div id="delete_error-message"></div>
+        </form>
+        <button onclick="goBack()">Back to Pharmacist Menu</button>
+      </div>
+    </div>
+
+    <script src="pharmacist_script.js"></script>
+  </body>
+</html>
