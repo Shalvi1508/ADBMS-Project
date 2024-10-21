@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Customer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-box">
+        <h1>Update Customer</h1>
+        <!-- Single form element for updating customer data -->
+        <form id="update-form">
+          <div class="input-box">
+            <label for="update_customer_id">Customer ID (e.g., CUST001)</label>
+            <input
+              type="text"
+              id="update_customer_id"
+              name="Customer_ID"
+              required
+            />
+            <small id="update_customer_id_error"></small>
+          </div>
+
+          <div class="input-box">
+            <label for="update_customer_name">Customer Name</label>
+            <input type="text" id="update_customer_name" name="Customer_name" />
+          </div>
+
+          <div class="input-box">
+            <label for="update_phone_number">Phone Number</label>
+            <input type="text" id="update_phone_number" name="Phone_number" />
+            <small id="update_phone_error"></small>
+          </div>
+
+          <div class="input-box">
+            <label for="update_email">Email ID (must be abc@gmail.com)</label>
+            <input type="email" id="update_email" name="Email_ID" />
+            <small id="update_email_error"></small>
+          </div>
+
+          <button type="submit">Update</button>
+          <div id="update_error-message"></div>
+        </form>
+        <button onclick="goBack()">Back to Customer Menu</button>
+      </div>
+    </div>
+
+    <script src="customer_script.js"></script>
+  </body>
+</html>
