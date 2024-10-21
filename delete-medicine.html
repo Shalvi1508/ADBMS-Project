@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Medicine</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-box">
+        <h1>Delete Medicine</h1>
+        <form id="delete-form">
+          <div class="input-box">
+            <label for="delete_medicine_id">Medicine ID (e.g., MED001):</label>
+            <input
+              type="text"
+              id="delete_medicine_id"
+              name="Medicine_ID"
+              required
+            />
+            <small id="delete_medicine_id_error"></small>
+          </div>
+
+          <div class="input-box">
+            <label for="delete_medicine_name">Medicine Name:</label>
+            <input
+              type="text"
+              id="delete_medicine_name"
+              name="delete_medicine_name"
+              required
+              placeholder="Paracetamol"
+            />
+            <small id="delete_medicine_name_error"></small>
+          </div>
+
+          <button type="submit">Delete</button>
+          <div id="delete_error-message"></div>
+        </form>
+        <button onclick="goBack()">Back to Medicine Menu</button>
+      </div>
+    </div>
+
+    <script src="medicine_script.js"></script>
+  </body>
+</html>
