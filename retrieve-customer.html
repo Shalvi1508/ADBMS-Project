@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retrieve Customer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-box">
+        <h1>Retrieve Customer by ID and Name</h1>
+
+        <form id="retrieve-customer-form">
+          <div class="input-box">
+            <label for="retrieve_customer_id">Customer ID:</label>
+            <input
+              type="text"
+              id="retrieve_customer_id"
+              name="retrieve_customer_id"
+              required
+              placeholder="CUST001"
+            />
+            <small id="retrieve_customer_id_error"></small>
+          </div>
+
+          <div class="input-box">
+            <label for="retrieve_customer_name">Customer Name:</label>
+            <input
+              type="text"
+              id="retrieve_customer_name"
+              name="retrieve_customer_name"
+              required
+              placeholder="John Doe"
+            />
+            <small id="retrieve_customer_name_error"></small>
+          </div>
+
+          <button type="submit">Retrieve Customer</button>
+          <small id="retrieve_error-message"></small>
+        </form>
+
+        <h3>Customer Details</h3>
+        <table id="customer_result" style="width: 100%">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <button onclick="goBack()">Go Back</button>
+      </div>
+    </div>
+
+    <script src="customer_script.js"></script>
+  </body>
+</html>
