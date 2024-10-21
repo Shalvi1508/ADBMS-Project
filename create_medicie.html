@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Medicine</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-box">
+        <h1>Create Medicine</h1>
+        <!-- Single form element for submitting data -->
+        <form id="create-medicine-form" method="post" action="/post-medicine">
+          <div class="input-box">
+            <label for="medicine_id">Medicine ID (e.g., MED001)</label>
+            <input
+              type="text"
+              id="medicine_id"
+              name="Medicine_ID"
+              required
+              pattern="MED\d{3}"
+              title="Medicine ID should follow the format 'MED' followed by 3
+            digits (e.g., MED001)."
+            />
+            <small id="medicine_id_error"></small>
+          </div>
+
+          <div class="input-box">
+            <label for="medicine_name">Medicine Name</label>
+            <input
+              type="text"
+              id="medicine_name"
+              name="Medicine_name"
+              required
+            />
+          </div>
+
+          <div class="input-box">
+            <label for="medicine_price">Price (₹ per unit)</label>
+            <input
+              type="number"
+              id="medicine_price"
+              name="Price"
+              required
+              min="1"
+              step="0.01"
+              title="Enter the price in rupees per unit."
+            />
+          </div>
+
+          <div class="input-box">
+            <label for="medicine_quantity">Quantity (minimum 1)</label>
+            <input
+              type="number"
+              id="medicine_quantity"
+              name="Quantity"
+              required
+              min="1"
+              title="Quantity must be at least 1."
+            />
+          </div>
+
+          <button type="submit">Submit</button>
+          <div id="create_error-message"></div>
+        </form>
+        <button onclick="goBack()">Back to Medicine Menu</button>
+      </div>
+    </div>
+
+    <script src="medicine_script.js"></script>
+  </body>
+</html>
