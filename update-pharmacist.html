@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Pharmacist</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-box">
+        <h1>Update Pharmacist</h1>
+        <form id="update-form">
+          <div class="input-box">
+            <label for="update_pharmacist_id"
+              >Pharmacist ID (e.g., PHARM001)</label
+            >
+            <input
+              type="text"
+              id="update_pharmacist_id"
+              name="Pharmacist_ID"
+              required
+            />
+            <small id="update_pharmacist_id_error"></small>
+          </div>
+
+          <div class="input-box">
+            <label for="update_pharmacist_name">Pharmacist Name</label>
+            <input
+              type="text"
+              id="update_pharmacist_name"
+              name="Pharmacist_name"
+            />
+          </div>
+
+          <div class="input-box">
+            <label for="update_contact_number">Contact Number</label>
+            <input type="text" id="update_contact_number" name="Phone_number" />
+            <small id="update_contact_error"></small>
+          </div>
+
+          <div class="input-box">
+            <label for="update_address">Address</label>
+            <input type="text" id="update_address" name="Address" />
+          </div>
+
+          <button type="submit">Update</button>
+          <div id="update_error-message"></div>
+        </form>
+        <button onclick="goBack()">Back to Pharmacist Menu</button>
+      </div>
+    </div>
+
+    <script src="pharmacist_script.js"></script>
+  </body>
+</html>
