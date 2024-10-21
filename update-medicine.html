@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Medicine</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-box">
+        <h1>Update Medicine</h1>
+        <!-- <form id="update-medicine-form"> -->
+        <form
+          id="update-medicine-form"
+          onsubmit="event.preventDefault(); medicine_script.js"
+        >
+          <div class="input-box">
+            <label for="update_medicine_id">Medicine ID (e.g., MED001)</label>
+            <input
+              type="text"
+              id="update_medicine_id"
+              name="Medicine_ID"
+              required
+            />
+            <small id="update_medicine_id_error"></small>
+          </div>
+
+          <div class="input-box">
+            <label for="update_medicine_name">Medicine Name</label>
+            <input type="text" id="update_medicine_name" name="Medicine_name" />
+          </div>
+
+          <div class="input-box">
+            <label for="update_price">Price</label>
+            <input type="number" id="update_price" name="price" />
+          </div>
+
+          <div class="input-box">
+            <label for="update_quantity">Quantity</label>
+            <input type="number" id="update_quantity" name="quantity" />
+          </div>
+
+          <button type="submit">Update</button>
+          <div id="update_error-message"></div>
+        </form>
+        <button onclick="goBack()">Back to Medicine Menu</button>
+      </div>
+    </div>
+
+    <script src="medicine_script.js"></script>
+  </body>
+</html>
